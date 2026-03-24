@@ -72,40 +72,40 @@ Example response:
 JSON alias for `/`.
 
 ```bash
-curl 'https://dns.api.airat.top/json?name=example.com&type=AAAA'
+curl 'https://dns.api.airat.top/json?name=example.com&type=A'
 ```
 
-Test in browser: https://dns.api.airat.top/json?name=example.com&type=AAAA
+Test in browser: https://dns.api.airat.top/json?name=example.com&type=A
 
 ### `GET /text`
 
 Returns plain text: one answer per line (or DNS status if no answers).
 
 ```bash
-curl 'https://dns.api.airat.top/text?name=example.com&type=MX'
+curl 'https://dns.api.airat.top/text?name=example.com&type=A'
 ```
 
-Test in browser: https://dns.api.airat.top/text?name=example.com&type=MX
+Test in browser: https://dns.api.airat.top/text?name=example.com&type=A
 
 ### `GET /yaml`
 
 Returns the same payload as YAML.
 
 ```bash
-curl 'https://dns.api.airat.top/yaml?name=example.com&type=TXT'
+curl 'https://dns.api.airat.top/yaml?name=example.com&type=A'
 ```
 
-Test in browser: https://dns.api.airat.top/yaml?name=example.com&type=TXT
+Test in browser: https://dns.api.airat.top/yaml?name=example.com&type=A
 
 ### `GET /xml`
 
 Returns the same payload as XML.
 
 ```bash
-curl 'https://dns.api.airat.top/xml?name=example.com&type=NS'
+curl 'https://dns.api.airat.top/xml?name=example.com&type=A'
 ```
 
-Test in browser: https://dns.api.airat.top/xml?name=example.com&type=NS
+Test in browser: https://dns.api.airat.top/xml?name=example.com&type=A
 
 ### `GET /health`
 
