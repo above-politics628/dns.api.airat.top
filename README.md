@@ -4,8 +4,8 @@
 
 Public Cloudflare Worker API for DNS lookups via DNS-over-HTTPS (DoH).
 
-Live endpoint: https://dns.api.airat.top
-Status page: https://status.airat.top
+- Live endpoint: https://dns.api.airat.top
+- Status page: https://status.airat.top
 
 ## API
 
